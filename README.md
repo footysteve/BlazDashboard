@@ -1,2 +1,2 @@
-# BlazDashboard
+# BlazorDash
 A dashboard built on Blazor
