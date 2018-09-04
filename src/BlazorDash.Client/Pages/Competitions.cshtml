@@ -1,0 +1,43 @@
+﻿@using BlazorDash.Shared
+@page "/competitions"
+@inject HttpClient Http
+
+<h1>Competitions</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (leagues == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var league in leagues)
+            {
+                <tr>
+                    <td>@league.Id</td>
+                    <td>@league.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+    FootballLeagueCompetition[] leagues;
+
+    protected override async Task OnInitAsync()
+    {
+        leagues = await Http.GetJsonAsync<FootballLeagueCompetition[]>("api/Competition/competitions");
+    }
+}
