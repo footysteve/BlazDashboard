@@ -11,5 +11,5 @@ A js world map component (echarts https://github.com/apache/incubator-echarts)
 
 Initially random test data is used but the aim is to build a sports data analytics dashboard, football (soccer to some) focused first.
 
-I'm also getting to know github so I'm uploading this working project in parts.
+I'm also getting to know github so will probably make mistakes but the project builds fine for me when downloaded from github. If it doesn't build for you I'd appreciate it if you let me know. Thanks!
 
