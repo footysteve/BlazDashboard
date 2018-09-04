@@ -1,1 +1,1 @@
-empty
+Blazor dashboard client
