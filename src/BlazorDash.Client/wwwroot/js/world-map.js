@@ -4,7 +4,7 @@
 function initWorldMap() {
 
     if (typeof (echarts) === 'undefined') { return; }
-    console.log('init_echarts');
+    console.log('initWorldMap');
 
 
     var theme = {
@@ -27,7 +27,7 @@ function initWorldMap() {
 
         toolbox: {
             color: ['#408829', '#408829', '#408829', '#408829']
-        },
+        },        
 
         tooltip: {
             backgroundColor: 'rgba(0,0,0,0.5)',
@@ -49,8 +49,13 @@ function initWorldMap() {
         dataZoom: {
             dataBackgroundColor: '#eee',
             fillerColor: 'rgba(64,136,41,0.2)',
-            handleColor: '#408829'
-        },
+            handleColor: '#408829',
+            show: true,
+            realtime: true,
+            start: 1,
+            end: 100
+        },        
+
         grid: {
             borderWidth: 0
         },
@@ -229,7 +234,7 @@ function initWorldMap() {
         echartMap.setOption({
             title: {
                 text: 'World Football Competitions (2018)',
-                subtext: 'data supplied by Opta',
+                subtext: 'not all competitions have been added yet',
                 x: 'center',
                 y: 'top'
             },
@@ -282,7 +287,7 @@ function initWorldMap() {
                 name: 'Competitions by Country (2018)',
                 type: 'map',
                 mapType: 'world',
-                roam: false,
+                roam: true,
                 mapLocation: {
                     y: 60
                 },
@@ -532,7 +537,7 @@ function initWorldMap() {
                     value: 1
                 }, {
                     name: 'Israel',
-                    value: 7420.368
+                    value: 2
                 }, {
                     name: 'Italy',
                     value: 5
@@ -827,6 +832,25 @@ function initWorldMap() {
                 }]
             }]
         });
+
+        //echartMap.on('click', function (params) {
+        //    if (params.data) {
+        //        echartMap.setOption({
+        //            world: {
+        //                center: params.data.value,
+        //                zoom: 6
+        //            }
+        //        });
+        //    } else {
+        //        echartMap.setOption({
+        //            world: {
+        //                center: [0, 0],
+        //                zoom: 1
+        //            }
+        //        });
+        //    }
+        //    //echartMap.setOption(option);
+        //});
 
     }
 
