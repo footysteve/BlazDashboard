@@ -12,3 +12,6 @@ A js world map component (echarts https://github.com/apache/incubator-echarts) w
 I'm also getting to know github so will probably make mistakes but the project builds fine for me when downloaded from github. If it doesn't build for you I'd appreciate it if you let me know. Thanks!
 
 2018-09-06: added some football competition data to map, hardcoded in js/world-map.js
+
+
+2018-09-12: * Please note this project is on hold temporarily while I build the http://blazor.space website (https://github.com/footysteve/blazor.space) It will have articles/info about Blazor and dotnet core, . The development of this dashobard will be featured on that site.
